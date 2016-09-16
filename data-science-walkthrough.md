@@ -1,11 +1,9 @@
-Data Science Walkthrough
-========================
+# Data Science Walkthrough
 
 http://brettromero.com/wordpress/data-science-a-kaggle-walkthrough-introduction/
 
 
-Understand Data
----------------
+## Understand Data
 
 - get hints for important fractions of the data
     - example: check time-dependeny of training data and date range of test
@@ -18,8 +16,7 @@ Understand Data
     sensititivy of the model
 
 
-Clean Data
-----------
+## Clean Data
 
 - domain knowledge may help here
 - fix formats
@@ -32,8 +29,7 @@ Clean Data
   accuracy (in general however, this is not good practice)
 
 
-Data Transformation
--------------------
+## Data Transformation
 
 - bucketing/binning: eliminate noise, e.g. convert age values to age categories
 - normalization (required by many algorithms)
@@ -49,8 +45,7 @@ this very category value).
     algorithms
 
 
-Feature Construction
---------------------
+## Feature Construction
 
 - domain knowledge helps a lot here!
 - hierarchical: extract different hierarchy levels from a variable
@@ -65,14 +60,12 @@ Feature Construction
     devices used
 
 
-Feature Selection
------------------
+## Feature Selection
 
 - depends on algorithm: some require few features, others don't care
 
 
-Algorithm Selection
--------------------
+## Algorithm Selection
 
 - most popular approaches: Random Forest and Gradient Boosting
     - for Gradient Boosting, use XGBoost library
@@ -84,14 +77,12 @@ evaluation measure for the problem at hand, and buld a reliable validation
 strategy
 
 
-Parameter Tuning
-----------------
+## Parameter Tuning
 
 - use grid search combined with k-fold cross-validation (GridSearchCV)
 
 
-Model Training
---------------
+## Model Training
 
 - split training/test data if it was combined during the cleaning phase
 - remove random nonsense data such as user-ids
@@ -118,13 +109,11 @@ Model Training
 - set defined seeds for RNG
 
 
-Prediction
-----------
+## Prediction
 
 - remove same random nonsense data as in the training phase, such as user-ids
 
 
-Interpretation
---------------
+## Interpretation
 
 - beware of "counfounding": interpreting correlation for causality

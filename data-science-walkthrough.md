@@ -99,19 +99,22 @@ Model Training
 - choose metric for performance measurement
     - see: http://scikit-learn.org/stable/modules/model_evaluation.html
     - Quote from svpons interview (see URL in Algorithm Selection):
-    > I always got the best results when using multi-class log-loss as
-    objective function. Specifically, for the the definition of EN_optA and
-    EN_optB (second layer), I tried with different objective functions like
-    mlogloss, mlogloss@5 (multi-class log-loss after keeping only the 5 classes
-    with highest probabilities), ndcg@5 (the competition evaluation metric) and
-    mlogloss + 2 - ndcg@5 (a combination of mlogloss and ndcg after converting
-    ndcg to a dissimilarity measure). I was expecting the ndcg not to work
-    well, since it is a non-smooth function and therefore not suitable for
-    gradient based optimization. However, I was not sure whether some
-    combination of mlogloss and ndcg could give any improvement.
-    [...]
-    Directly using an [competition] evaluation metric as objective function is
-    not always the optimal solution.
+
+        > I always got the best results when using multi-class log-loss as
+        objective function. Specifically, for the the definition of EN_optA and
+        EN_optB (second layer), I tried with different objective functions like
+        mlogloss, mlogloss@5 (multi-class log-loss after keeping only the 5
+        classes with highest probabilities), ndcg@5 (the competition evaluation
+        metric) and mlogloss + 2 - ndcg@5 (a combination of mlogloss and ndcg
+        after converting ndcg to a dissimilarity measure). I was expecting the
+        ndcg not to work well, since it is a non-smooth function and therefore
+        not suitable for gradient based optimization. However, I was not sure
+        whether some combination of mlogloss and ndcg could give any
+        improvement.
+
+        > Directly using an [competition] evaluation metric as objective
+        function is not always the optimal solution.
+
 - set defined seeds for RNG
 
 

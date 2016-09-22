@@ -1,5 +1,6 @@
 # Data Science Walkthrough
 
+Based on:
 http://brettromero.com/wordpress/data-science-a-kaggle-walkthrough-introduction/
 
 
@@ -112,6 +113,12 @@ strategy
 ## Prediction
 
 - remove same random nonsense data as in the training phase, such as user-ids
+
+
+## Validation and Model Refinement
+
+- check residuals (e.g. via 4-in-1: residual normal probability plot, residual
+  histogram, residuals versus fits, residuals versus order)
 
 
 ## Interpretation
